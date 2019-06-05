@@ -27,7 +27,7 @@ $(BIN)/testlib: test/test_libcplus.cpp
 		-L$(LIB) \
 		-L/mnt/d/VSCodeCplus/add \
 		-L/mnt/d/VSCodeCplus/libcrfpp/dist \
-		$^ -o $@ -lpthread -ladd -lggg -lcrfpp -lcurl
+		$^ -o $@ -lpthread -ladd -lcrfpp
 
 clean:
 	-rm bin/*
