@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux WSL",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "__linux__",
+                "__x86_64__"
+            ],
+            "windowsSdkVersion": "10.0.17763.0",
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

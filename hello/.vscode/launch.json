@@ -1,0 +1,67 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "main gdb wsl ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/d/VSCodeCplus/hello/bin/main",
+            "args": ["-fThreading"],
+            "stopAtEntry": false,
+            "cwd": "/mnt/d/VSCodeCplus/hello",
+            "environment": [],
+            "externalConsole": true,
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeProgram": "${env:windir}\\system32\\bash.exe",
+                "pipeArgs": ["-c"],
+                "pipeCwd": ""
+            },
+            "additionalSOLibSearchPath": "",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "sourceFileMap": {
+                "/mnt/d": "d:\\",
+                "/usr": "${env:localappdata}\\Packages\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\LocalState\\rootfs\\usr",
+            }
+        },
+        {
+            "name": "testlib gdb wsl ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/d/VSCodeCplus/hello/bin/testlib",
+            "args": ["-fThreading"],
+            "stopAtEntry": false,
+            "cwd": "/mnt/d/VSCodeCplus/hello",
+            "environment": [],
+            "externalConsole": true,
+            "pipeTransport": {
+                "debuggerPath": "env LD_LIBRARY_PATH=/mnt/d/mylibrary/add:/mnt/d/mylibrary/ggg:/mnt/d/VSCodeCplus/crf++/libcrfpp/bin:/mnt/d/mylibrary/curl-7.47.0/lib/.libs /usr/bin/gdb",
+                "pipeProgram": "${env:windir}\\system32\\bash.exe",
+                "pipeArgs": ["-c"],
+                "pipeCwd": ""
+            },
+            "additionalSOLibSearchPath": "",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "sourceFileMap": {
+                "/mnt/d": "d:\\",
+                "/usr": "${env:localappdata}\\Packages\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\LocalState\\rootfs\\usr",
+            }
+        },
+        
+    ]
+}

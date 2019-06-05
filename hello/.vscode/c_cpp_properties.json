@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "WSL",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:\\mylibrary\\curl-7.47.0\\include",
+                "D:\\mylibrary\\add"
+            ],
+            "defines": [
+                "__linux__",
+                "__x86_64__"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
