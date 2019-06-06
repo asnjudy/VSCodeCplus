@@ -1,16 +1,13 @@
 #include <iostream>
 
-class User
-{
-private:
-    int x, y;
-};
 
 int main()
 {
-    const std::string str2 = "hello";
-    std::cout << "xx:" << str2[5] << "xx"<< std::endl;
-    
+    std::string str = "abcd";
+    std::string str2 = "bc";
 
+
+    std::cout <<str.compare(str2) << std::endl;
+    std::cout << (str <= str2) << std::endl;
     return 0;
 }

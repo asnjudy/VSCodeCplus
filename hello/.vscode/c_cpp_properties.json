@@ -4,8 +4,8 @@
             "name": "WSL",
             "includePath": [
                 "${workspaceFolder}/**",
-                "D:\\mylibrary\\curl-7.47.0\\include",
-                "D:\\mylibrary\\add"
+                "D:\\VSCodeCplus\\libcrfpp\\include",
+                "D:\\VSCodeCplus\\add"
             ],
             "defines": [
                 "__linux__",

@@ -1,5 +1,5 @@
 CXX		  := g++
-CXX_FLAGS := -Wall -std=c++11 -ggdb -Wl,-rpath=lib
+CXX_FLAGS := -Wall -std=c++11 -ggdb
 
 BIN		:= bin
 SRC		:= src
@@ -20,7 +20,7 @@ $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
 
 $(BIN)/testlib: test/test_libcplus.cpp
-	$(CXX) $(CXX_FLAGS) \
+	$(CXX) $(CXX_FLAGS) -Wl,-rpath=../../add:../../libcrfpp/dist \
 		-I$(INCLUDE) \
 		-I/mnt/d/VSCodeCplus/add \
 		-I/mnt/d/VSCodeCplus/libcrfpp/include \

@@ -2,9 +2,7 @@
 #include <cstring>
 #include <vector>
 
-#include "curl/curl.h"
 #include "add.h"
-#include "get.h"
 #include "crfpp.h"
 
 void test_cstring()
@@ -80,22 +78,9 @@ int main(int argc, char **argv)
     test_pthread(); // 测试 libpthread.so 动态链接库
     test_crfpp(argc, argv);
 
-    std::cout << "before invoking curl..." << std::endl;
-    curl_easy_init();
-    std::cout << "after curl..." << std::endl;
-
     int ret = add(3, 4);
     std::cout << "3 + 4 =" << ret << std::endl;
 
-    int a = 100;
-    int b = get();
-    int c = set(a);
-    int d = get();
-
-    std::cout << "a = " << a << std::endl;
-    std::cout << "b = " << b << std::endl;
-    std::cout << "c = " << c << std::endl;
-    std::cout << "d = " << d << std::endl;
 
     return 0;
 }
