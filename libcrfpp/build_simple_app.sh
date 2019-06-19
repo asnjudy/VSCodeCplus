@@ -27,7 +27,7 @@ compile_app_source()
 
     shell_cmd="g++ -DHAVE_CONFIG_H -Wall -std=c++11 -ggdb -Iinclude \
                     -o dist/$app_name \
-                    src/test/$app_source $lib_source_all
+                    src/test/$app_source $lib_source_all \
                     -lpthread"
     echo $shell_cmd
     $shell_cmd

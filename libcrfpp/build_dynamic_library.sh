@@ -50,30 +50,30 @@ clean() {
 }
 
 case "$1" in
-clean)
-    clean
-    ;;
-link)
-    link
-    ;;
-build)
-    build
-    ;;
-test)
-    # 编译 crf_learn.cpp 生成目标文件，指定头文件
-    g++ -DHAVE_CONFIG_H -Wall -ggdb -Iinclude -c -o tmp/crf_learn.o src/test/crf_learn.cpp
-    # 组装目标文件生成可执行文件
-    g++ -Wall -Ldist -o dist/crf_learn tmp/crf_learn.o -lcrfpp
+    clean)
+        clean
+        ;;
+    link)
+        link
+        ;;
+    build)
+        build
+        ;;
+    test)
+        # 编译 crf_learn.cpp 生成目标文件，指定头文件
+        g++ -DHAVE_CONFIG_H -Wall -ggdb -Iinclude -c -o tmp/crf_learn.o src/test/crf_learn.cpp
+        # 组装目标文件生成可执行文件
+        g++ -Wall -Ldist -o dist/crf_learn tmp/crf_learn.o -lcrfpp
 
-    # 编译 crf_test.cpp
-    g++ -DHAVE_CONFIG_H -Wall -ggdb -Iinclude -Ldist -o dest/crf_test src/test/crf_learn.cpp -lcrfpp
-    # 编译 example.cpp
-    g++ -DHAVE_CONFIG_H -Wall -ggdb -Iinclude -Ldist -o dest/example src/test/example.cpp -lcrfpp
-    ;;
-*)
-    echo "Usage: ./make {build|test|clean}"
-    exit 1
-    ;;
+        # 编译 crf_test.cpp
+        g++ -DHAVE_CONFIG_H -Wall -ggdb -Iinclude -Ldist -o dest/crf_test src/test/crf_learn.cpp -lcrfpp
+        # 编译 example.cpp
+        g++ -DHAVE_CONFIG_H -Wall -ggdb -Iinclude -Ldist -o dest/example src/test/example.cpp -lcrfpp
+        ;;
+    *)
+        echo "Usage: ./make {build|test|clean}"
+        exit 1
+        ;;
 esac
 
 exit 0
